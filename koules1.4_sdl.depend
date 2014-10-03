@@ -1,0 +1,220 @@
+# depslib dependency file v1.0
+889037959 source:d:\gp2x\koules\koules1.4_sdl\objectsio.c
+	"koules.h"
+	"net.h"
+	"client.h"
+	"server.h"
+	<string.h>
+	<math.h>
+
+1166213355 d:\gp2x\koules\koules1.4_sdl\koules.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<unistd.h>
+	<math.h>
+	<sys/types.h>
+	<fcntl.h>
+	"joystick.h"
+	"sound.h"
+	"interface.h"
+
+889037959 d:\gp2x\koules\koules1.4_sdl\joystick.h
+	<linux/errno.h>
+	<linux/major.h>
+	<asm/io.h>
+	<asm/segment.h>
+	<asm/system.h>
+	<linux/module.h>
+
+1166302050 d:\gp2x\koules\koules1.4_sdl\sound.h
+
+889037959 d:\gp2x\koules\koules1.4_sdl\net.h
+
+889037959 d:\gp2x\koules\koules1.4_sdl\client.h
+
+889037959 d:\gp2x\koules\koules1.4_sdl\server.h
+
+1166013939 d:\gp2x\koules\koules1.4_sdl\sdl\interface.h
+	<vga.h>
+	<vgagl.h>
+	<vgakeyboard.h>
+	"SDL/SDL.h"
+	"SDL/SDL_gfxPrimitives.h"
+	"SFont.h"
+	"../koules.h"
+	<vgamouse.h>
+	"input.h"
+
+1079545412 d:\gp2x\koules\koules1.4_sdl\sdl\sfont.h
+	<SDL.h>
+
+1166009714 d:\gp2x\koules\koules1.4_sdl\sdl\input.h
+
+889037959 source:d:\gp2x\koules\koules1.4_sdl\nas_sound.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/time.h>
+	<fcntl.h>
+	<string.h>
+	<signal.h>
+	<sys/stat.h>
+	<audio/audiolib.h>
+	<audio/soundlib.h>
+	<X11/Xlib.h>
+	"koules.h"
+
+1166220145 source:d:\gp2x\koules\koules1.4_sdl\sdl\init.c
+	"SDL.h"
+	"SDL/SDL_gfxPrimitives.h"
+	"SFont.h"
+	<sys/time.h>
+	<time.h>
+	"../koules.h"
+	"../server.h"
+	"../client.h"
+	"../net.h"
+	"../framebuffer.h"
+	<signal.h>
+	<stdlib.h>
+	<alloca.h>
+	<sys/time.h>
+	<sys/stat.h>
+	<sys/vt.h>
+	<unistd.h>
+
+889037959 d:\gp2x\koules\koules1.4_sdl\framebuffer.h
+
+1166043607 source:d:\gp2x\koules\koules1.4_sdl\cmap.c
+	"koules.h"
+	"cmap.h"
+
+1166013564 d:\gp2x\koules\koules1.4_sdl\cmap.h
+
+1166055660 source:d:\gp2x\koules\koules1.4_sdl\font.c
+	<stdio.h>
+	<string.h>
+	"font.h"
+	"koules.h"
+
+889037959 d:\gp2x\koules\koules1.4_sdl\font.h
+	"koules.h"
+
+1166051128 source:d:\gp2x\koules\koules1.4_sdl\framebuffer.c
+	"koules.h"
+
+1166388028 source:d:\gp2x\koules\koules1.4_sdl\gameplan.c
+	"koules.h"
+	"server.h"
+
+1166059090 source:d:\gp2x\koules\koules1.4_sdl\intro.c
+	"koules.h"
+	"font.h"
+	"text.h"
+	<sys/time.h>
+	<unistd.h>
+
+1166044195 d:\gp2x\koules\koules1.4_sdl\text.h
+
+1166210648 source:d:\gp2x\koules\koules1.4_sdl\koules.c
+	<unistd.h>
+	"koules.h"
+	"server.h"
+	"client.h"
+	<sys/time.h>
+
+1166388856 source:d:\gp2x\koules\koules1.4_sdl\menu.c
+	"koules.h"
+	"net.h"
+	"client.h"
+	<sys/ioctl.h>
+
+889037959 source:d:\gp2x\koules\koules1.4_sdl\mygetopt.c
+	<string.h>
+	<stdio.h>
+
+889037959 source:d:\gp2x\koules\koules1.4_sdl\client.c
+	<stdio.h>
+	<sys/time.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	"sock.h"
+	"net.h"
+	"client.h"
+	"koules.h"
+
+889037959 d:\gp2x\koules\koules1.4_sdl\sock.h
+	<netinet/in.h>
+
+1166382483 source:d:\gp2x\koules\koules1.4_sdl\rcfiles.c
+	<errno.h>
+	"koules.h"
+
+889037959 source:d:\gp2x\koules\koules1.4_sdl\rsound.c
+	<stdio.h>
+	<fcntl.h>
+	<stdlib.h>
+	<stddef.h>
+	<ctype.h>
+	<errno.h>
+	<sys/stat.h>
+	<sys/fcntl.h>
+	"rplay.h"
+	<X11/Xlib.h>
+	"koules.h"
+
+1079001372 source:d:\gp2x\koules\koules1.4_sdl\sdl\sfont.c
+	<SDL.h>
+	<assert.h>
+	<stdlib.h>
+	"SFont.h"
+
+1163323727 source:d:\gp2x\koules\koules1.4_sdl\server.c
+	<stdio.h>
+	<sys/time.h>
+	<string.h>
+	<signal.h>
+	<unistd.h>
+	<errno.h>
+	"sock.h"
+	"koules.h"
+	"server.h"
+	"net.h"
+
+889108308 source:d:\gp2x\koules\koules1.4_sdl\sock.c
+	<unistd.h>
+	<sys/types.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<sys/filio.h>
+	<time.h>
+	<sys/time.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netinet/tcp.h>
+	<arpa/inet.h>
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<netdb.h>
+	<signal.h>
+	<setjmp.h>
+	<errno.h>
+	<sys/fcntl.h>
+	<arpa/nameser.h>
+	<resolv.h>
+	"sock.h"
+
+1166388825 source:d:\gp2x\koules\koules1.4_sdl\sound.c
+	"SDL.h"
+	"SDL_mixer.h"
+	<stdio.h>
+	<stdlib.h>
+
+889037959 source:d:\gp2x\koules\koules1.4_sdl\util\usleep.c
+	<stdlib.h>
+	<time.h>
+	<sys/time.h>
+

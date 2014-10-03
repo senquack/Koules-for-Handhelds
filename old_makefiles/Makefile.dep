@@ -1,0 +1,390 @@
+# DO NOT DELETE
+
+koules.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+koules.o: /usr/include/_ansi.h /usr/include/newlib.h
+koules.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
+koules.o: /usr/include/cygwin/config.h /usr/include/sys/types.h
+koules.o: /usr/include/machine/_types.h /usr/include/limits.h
+koules.o: /usr/include/features.h /usr/include/sys/cdefs.h
+koules.o: /usr/include/sys/features.h /usr/include/sys/_types.h
+koules.o: /usr/include/sys/lock.h
+koules.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+koules.o: /usr/include/machine/types.h /usr/include/cygwin/types.h
+koules.o: /usr/include/sys/sysmacros.h /usr/include/stdint.h
+koules.o: /usr/include/endian.h /usr/include/getopt.h koules.h
+koules.o: /usr/include/stdio.h
+koules.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+koules.o: /usr/include/sys/reent.h /usr/include/sys/stdio.h
+koules.o: /usr/include/string.h /usr/include/sys/string.h
+koules.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
+koules.o: /usr/include/alloca.h /usr/include/cygwin/stdlib.h
+koules.o: /usr/include/cygwin/wait.h /usr/include/math.h /usr/include/fcntl.h
+koules.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
+koules.o: /usr/include/time.h /usr/include/machine/time.h
+koules.o: /usr/include/cygwin/time.h /usr/include/signal.h
+koules.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+koules.o: /usr/include/cygwin/stat.h xlib/interface.h
+koules.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+koules.o: /usr/X11R6/include/X11/Xfuncproto.h
+koules.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+koules.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+koules.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+koules.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+koules.o: xlib/input.h server.h client.h /usr/include/sys/time.h
+koules.o: /usr/include/cygwin/sys_time.h /usr/include/sys/select.h
+menu.o: koules.h /usr/include/stdio.h /usr/include/_ansi.h
+menu.o: /usr/include/newlib.h /usr/include/sys/config.h
+menu.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+menu.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+menu.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+menu.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+menu.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+menu.o: /usr/include/machine/_types.h /usr/include/limits.h
+menu.o: /usr/include/features.h /usr/include/sys/cdefs.h
+menu.o: /usr/include/sys/features.h /usr/include/machine/types.h
+menu.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+menu.o: /usr/include/stdint.h /usr/include/endian.h /usr/include/sys/stdio.h
+menu.o: /usr/include/string.h /usr/include/sys/string.h /usr/include/stdlib.h
+menu.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+menu.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+menu.o: /usr/include/unistd.h /usr/include/sys/unistd.h /usr/include/getopt.h
+menu.o: /usr/include/math.h /usr/include/fcntl.h /usr/include/sys/fcntl.h
+menu.o: /usr/include/sys/stat.h /usr/include/time.h
+menu.o: /usr/include/machine/time.h /usr/include/cygwin/time.h
+menu.o: /usr/include/signal.h /usr/include/sys/signal.h
+menu.o: /usr/include/cygwin/signal.h /usr/include/cygwin/stat.h
+menu.o: xlib/interface.h /usr/X11R6/include/X11/Xlib.h
+menu.o: /usr/X11R6/include/X11/X.h /usr/X11R6/include/X11/Xfuncproto.h
+menu.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+menu.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+menu.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+menu.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+menu.o: xlib/input.h net.h client.h
+gameplan.o: koules.h /usr/include/stdio.h /usr/include/_ansi.h
+gameplan.o: /usr/include/newlib.h /usr/include/sys/config.h
+gameplan.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+gameplan.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+gameplan.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+gameplan.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+gameplan.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+gameplan.o: /usr/include/machine/_types.h /usr/include/limits.h
+gameplan.o: /usr/include/features.h /usr/include/sys/cdefs.h
+gameplan.o: /usr/include/sys/features.h /usr/include/machine/types.h
+gameplan.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+gameplan.o: /usr/include/stdint.h /usr/include/endian.h
+gameplan.o: /usr/include/sys/stdio.h /usr/include/string.h
+gameplan.o: /usr/include/sys/string.h /usr/include/stdlib.h
+gameplan.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+gameplan.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+gameplan.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+gameplan.o: /usr/include/getopt.h /usr/include/math.h /usr/include/fcntl.h
+gameplan.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
+gameplan.o: /usr/include/time.h /usr/include/machine/time.h
+gameplan.o: /usr/include/cygwin/time.h /usr/include/signal.h
+gameplan.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+gameplan.o: /usr/include/cygwin/stat.h xlib/interface.h
+gameplan.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+gameplan.o: /usr/X11R6/include/X11/Xfuncproto.h
+gameplan.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+gameplan.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+gameplan.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+gameplan.o: /usr/include/sys/cygwin.h
+gameplan.o: /usr/X11R6/include/X11/extensions/XShm.h xlib/input.h server.h
+font.o: /usr/include/stdio.h /usr/include/_ansi.h /usr/include/newlib.h
+font.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
+font.o: /usr/include/cygwin/config.h
+font.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+font.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+font.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+font.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+font.o: /usr/include/machine/_types.h /usr/include/limits.h
+font.o: /usr/include/features.h /usr/include/sys/cdefs.h
+font.o: /usr/include/sys/features.h /usr/include/machine/types.h
+font.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+font.o: /usr/include/stdint.h /usr/include/endian.h /usr/include/sys/stdio.h
+font.o: /usr/include/string.h /usr/include/sys/string.h font.h koules.h
+font.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
+font.o: /usr/include/alloca.h /usr/include/cygwin/stdlib.h
+font.o: /usr/include/cygwin/wait.h /usr/include/unistd.h
+font.o: /usr/include/sys/unistd.h /usr/include/getopt.h /usr/include/math.h
+font.o: /usr/include/fcntl.h /usr/include/sys/fcntl.h /usr/include/sys/stat.h
+font.o: /usr/include/time.h /usr/include/machine/time.h
+font.o: /usr/include/cygwin/time.h /usr/include/signal.h
+font.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+font.o: /usr/include/cygwin/stat.h xlib/interface.h
+font.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+font.o: /usr/X11R6/include/X11/Xfuncproto.h /usr/X11R6/include/X11/Xosdefs.h
+font.o: /usr/X11R6/include/X11/Xutil.h xlib/inlstring.h
+font.o: /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+font.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+font.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+font.o: xlib/input.h
+intro.o: koules.h /usr/include/stdio.h /usr/include/_ansi.h
+intro.o: /usr/include/newlib.h /usr/include/sys/config.h
+intro.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+intro.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+intro.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+intro.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+intro.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+intro.o: /usr/include/machine/_types.h /usr/include/limits.h
+intro.o: /usr/include/features.h /usr/include/sys/cdefs.h
+intro.o: /usr/include/sys/features.h /usr/include/machine/types.h
+intro.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+intro.o: /usr/include/stdint.h /usr/include/endian.h /usr/include/sys/stdio.h
+intro.o: /usr/include/string.h /usr/include/sys/string.h
+intro.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
+intro.o: /usr/include/alloca.h /usr/include/cygwin/stdlib.h
+intro.o: /usr/include/cygwin/wait.h /usr/include/unistd.h
+intro.o: /usr/include/sys/unistd.h /usr/include/getopt.h /usr/include/math.h
+intro.o: /usr/include/fcntl.h /usr/include/sys/fcntl.h
+intro.o: /usr/include/sys/stat.h /usr/include/time.h
+intro.o: /usr/include/machine/time.h /usr/include/cygwin/time.h
+intro.o: /usr/include/signal.h /usr/include/sys/signal.h
+intro.o: /usr/include/cygwin/signal.h /usr/include/cygwin/stat.h
+intro.o: xlib/interface.h /usr/X11R6/include/X11/Xlib.h
+intro.o: /usr/X11R6/include/X11/X.h /usr/X11R6/include/X11/Xfuncproto.h
+intro.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+intro.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+intro.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+intro.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+intro.o: xlib/input.h font.h text.h /usr/include/sys/time.h
+intro.o: /usr/include/cygwin/sys_time.h /usr/include/sys/select.h
+rcfiles.o: /usr/include/errno.h /usr/include/sys/errno.h
+rcfiles.o: /usr/include/sys/reent.h /usr/include/_ansi.h
+rcfiles.o: /usr/include/newlib.h /usr/include/sys/config.h
+rcfiles.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+rcfiles.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
+rcfiles.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h koules.h
+rcfiles.o: /usr/include/stdio.h
+rcfiles.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+rcfiles.o: /usr/include/sys/types.h /usr/include/machine/_types.h
+rcfiles.o: /usr/include/limits.h /usr/include/features.h
+rcfiles.o: /usr/include/sys/cdefs.h /usr/include/sys/features.h
+rcfiles.o: /usr/include/machine/types.h /usr/include/cygwin/types.h
+rcfiles.o: /usr/include/sys/sysmacros.h /usr/include/stdint.h
+rcfiles.o: /usr/include/endian.h /usr/include/sys/stdio.h
+rcfiles.o: /usr/include/string.h /usr/include/sys/string.h
+rcfiles.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
+rcfiles.o: /usr/include/alloca.h /usr/include/cygwin/stdlib.h
+rcfiles.o: /usr/include/cygwin/wait.h /usr/include/unistd.h
+rcfiles.o: /usr/include/sys/unistd.h /usr/include/getopt.h
+rcfiles.o: /usr/include/math.h /usr/include/fcntl.h /usr/include/sys/fcntl.h
+rcfiles.o: /usr/include/sys/stat.h /usr/include/time.h
+rcfiles.o: /usr/include/machine/time.h /usr/include/cygwin/time.h
+rcfiles.o: /usr/include/signal.h /usr/include/sys/signal.h
+rcfiles.o: /usr/include/cygwin/signal.h /usr/include/cygwin/stat.h
+rcfiles.o: xlib/interface.h /usr/X11R6/include/X11/Xlib.h
+rcfiles.o: /usr/X11R6/include/X11/X.h /usr/X11R6/include/X11/Xfuncproto.h
+rcfiles.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+rcfiles.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+rcfiles.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+rcfiles.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+rcfiles.o: xlib/input.h
+framebuffer.o: koules.h /usr/include/stdio.h /usr/include/_ansi.h
+framebuffer.o: /usr/include/newlib.h /usr/include/sys/config.h
+framebuffer.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+framebuffer.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+framebuffer.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+framebuffer.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+framebuffer.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+framebuffer.o: /usr/include/machine/_types.h /usr/include/limits.h
+framebuffer.o: /usr/include/features.h /usr/include/sys/cdefs.h
+framebuffer.o: /usr/include/sys/features.h /usr/include/machine/types.h
+framebuffer.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+framebuffer.o: /usr/include/stdint.h /usr/include/endian.h
+framebuffer.o: /usr/include/sys/stdio.h /usr/include/string.h
+framebuffer.o: /usr/include/sys/string.h /usr/include/stdlib.h
+framebuffer.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+framebuffer.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+framebuffer.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+framebuffer.o: /usr/include/getopt.h /usr/include/math.h /usr/include/fcntl.h
+framebuffer.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
+framebuffer.o: /usr/include/time.h /usr/include/machine/time.h
+framebuffer.o: /usr/include/cygwin/time.h /usr/include/signal.h
+framebuffer.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+framebuffer.o: /usr/include/cygwin/stat.h xlib/interface.h
+framebuffer.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+framebuffer.o: /usr/X11R6/include/X11/Xfuncproto.h
+framebuffer.o: /usr/X11R6/include/X11/Xosdefs.h
+framebuffer.o: /usr/X11R6/include/X11/Xutil.h xlib/inlstring.h
+framebuffer.o: /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+framebuffer.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+framebuffer.o: /usr/include/sys/cygwin.h
+framebuffer.o: /usr/X11R6/include/X11/extensions/XShm.h xlib/input.h
+cmap-x11.o: koules.h /usr/include/stdio.h /usr/include/_ansi.h
+cmap-x11.o: /usr/include/newlib.h /usr/include/sys/config.h
+cmap-x11.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+cmap-x11.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+cmap-x11.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+cmap-x11.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+cmap-x11.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+cmap-x11.o: /usr/include/machine/_types.h /usr/include/limits.h
+cmap-x11.o: /usr/include/features.h /usr/include/sys/cdefs.h
+cmap-x11.o: /usr/include/sys/features.h /usr/include/machine/types.h
+cmap-x11.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+cmap-x11.o: /usr/include/stdint.h /usr/include/endian.h
+cmap-x11.o: /usr/include/sys/stdio.h /usr/include/string.h
+cmap-x11.o: /usr/include/sys/string.h /usr/include/stdlib.h
+cmap-x11.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+cmap-x11.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+cmap-x11.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+cmap-x11.o: /usr/include/getopt.h /usr/include/math.h /usr/include/fcntl.h
+cmap-x11.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
+cmap-x11.o: /usr/include/time.h /usr/include/machine/time.h
+cmap-x11.o: /usr/include/cygwin/time.h /usr/include/signal.h
+cmap-x11.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+cmap-x11.o: /usr/include/cygwin/stat.h xlib/interface.h
+cmap-x11.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+cmap-x11.o: /usr/X11R6/include/X11/Xfuncproto.h
+cmap-x11.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+cmap-x11.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+cmap-x11.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+cmap-x11.o: /usr/include/sys/cygwin.h
+cmap-x11.o: /usr/X11R6/include/X11/extensions/XShm.h xlib/input.h
+client.o: /usr/include/stdio.h /usr/include/_ansi.h /usr/include/newlib.h
+client.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
+client.o: /usr/include/cygwin/config.h
+client.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+client.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+client.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+client.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+client.o: /usr/include/machine/_types.h /usr/include/limits.h
+client.o: /usr/include/features.h /usr/include/sys/cdefs.h
+client.o: /usr/include/sys/features.h /usr/include/machine/types.h
+client.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+client.o: /usr/include/stdint.h /usr/include/endian.h
+client.o: /usr/include/sys/stdio.h /usr/include/sys/time.h
+client.o: /usr/include/cygwin/sys_time.h /usr/include/sys/select.h
+client.o: /usr/include/time.h /usr/include/machine/time.h
+client.o: /usr/include/cygwin/time.h /usr/include/signal.h
+client.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+client.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+client.o: /usr/include/getopt.h /usr/include/string.h
+client.o: /usr/include/sys/string.h /usr/include/errno.h
+client.o: /usr/include/sys/errno.h sock.h /usr/include/netinet/in.h
+client.o: /usr/include/cygwin/in.h /usr/include/cygwin/socket.h
+client.o: /usr/include/asm/socket.h /usr/include/cygwin/if.h
+client.o: /usr/include/sys/socket.h /usr/include/cygwin/sockios.h
+client.o: /usr/include/cygwin/uio.h /usr/include/asm/byteorder.h net.h
+client.o: client.h koules.h /usr/include/stdlib.h
+client.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+client.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+client.o: /usr/include/math.h /usr/include/fcntl.h /usr/include/sys/fcntl.h
+client.o: /usr/include/sys/stat.h /usr/include/cygwin/stat.h xlib/interface.h
+client.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+client.o: /usr/X11R6/include/X11/Xfuncproto.h
+client.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+client.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+client.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+client.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+client.o: xlib/input.h
+server.o: /usr/include/stdio.h /usr/include/_ansi.h /usr/include/newlib.h
+server.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
+server.o: /usr/include/cygwin/config.h
+server.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+server.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+server.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+server.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+server.o: /usr/include/machine/_types.h /usr/include/limits.h
+server.o: /usr/include/features.h /usr/include/sys/cdefs.h
+server.o: /usr/include/sys/features.h /usr/include/machine/types.h
+server.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+server.o: /usr/include/stdint.h /usr/include/endian.h
+server.o: /usr/include/sys/stdio.h /usr/include/sys/time.h
+server.o: /usr/include/cygwin/sys_time.h /usr/include/sys/select.h
+server.o: /usr/include/time.h /usr/include/machine/time.h
+server.o: /usr/include/cygwin/time.h /usr/include/signal.h
+server.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+server.o: /usr/include/string.h /usr/include/sys/string.h
+server.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+server.o: /usr/include/getopt.h /usr/include/errno.h /usr/include/sys/errno.h
+server.o: sock.h /usr/include/netinet/in.h /usr/include/cygwin/in.h
+server.o: /usr/include/cygwin/socket.h /usr/include/asm/socket.h
+server.o: /usr/include/cygwin/if.h /usr/include/sys/socket.h
+server.o: /usr/include/cygwin/sockios.h /usr/include/cygwin/uio.h
+server.o: /usr/include/asm/byteorder.h koules.h /usr/include/stdlib.h
+server.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+server.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+server.o: /usr/include/math.h /usr/include/fcntl.h /usr/include/sys/fcntl.h
+server.o: /usr/include/sys/stat.h /usr/include/cygwin/stat.h xlib/interface.h
+server.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+server.o: /usr/X11R6/include/X11/Xfuncproto.h
+server.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+server.o: xlib/inlstring.h /usr/include/sys/ipc.h /usr/include/cygwin/ipc.h
+server.o: /usr/include/sys/shm.h /usr/include/cygwin/shm.h
+server.o: /usr/include/sys/cygwin.h /usr/X11R6/include/X11/extensions/XShm.h
+server.o: xlib/input.h server.h net.h
+sock.o: /usr/include/unistd.h /usr/include/sys/unistd.h /usr/include/_ansi.h
+sock.o: /usr/include/newlib.h /usr/include/sys/config.h
+sock.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+sock.o: /usr/include/sys/types.h /usr/include/machine/_types.h
+sock.o: /usr/include/limits.h /usr/include/features.h
+sock.o: /usr/include/sys/cdefs.h /usr/include/sys/features.h
+sock.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
+sock.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+sock.o: /usr/include/machine/types.h /usr/include/cygwin/types.h
+sock.o: /usr/include/sys/sysmacros.h /usr/include/stdint.h
+sock.o: /usr/include/endian.h /usr/include/getopt.h /usr/include/sys/param.h
+sock.o: /usr/include/sys/ioctl.h /usr/include/sys/time.h
+sock.o: /usr/include/cygwin/sys_time.h /usr/include/sys/select.h
+sock.o: /usr/include/time.h /usr/include/sys/reent.h
+sock.o: /usr/include/machine/time.h /usr/include/cygwin/time.h
+sock.o: /usr/include/signal.h /usr/include/sys/signal.h
+sock.o: /usr/include/cygwin/signal.h /usr/include/sys/socket.h
+sock.o: /usr/include/cygwin/socket.h /usr/include/asm/socket.h
+sock.o: /usr/include/cygwin/if.h /usr/include/cygwin/sockios.h
+sock.o: /usr/include/cygwin/uio.h /usr/include/netinet/in.h
+sock.o: /usr/include/cygwin/in.h /usr/include/asm/byteorder.h
+sock.o: /usr/include/netinet/tcp.h /usr/include/arpa/inet.h
+sock.o: /usr/include/string.h /usr/include/sys/string.h /usr/include/stdlib.h
+sock.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+sock.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+sock.o: /usr/include/stdio.h
+sock.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+sock.o: /usr/include/sys/stdio.h /usr/include/netdb.h /usr/include/setjmp.h
+sock.o: /usr/include/machine/setjmp.h /usr/include/errno.h
+sock.o: /usr/include/sys/errno.h sock.h
+objectsio.o: koules.h /usr/include/stdio.h /usr/include/_ansi.h
+objectsio.o: /usr/include/newlib.h /usr/include/sys/config.h
+objectsio.o: /usr/include/machine/ieeefp.h /usr/include/cygwin/config.h
+objectsio.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+objectsio.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+objectsio.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
+objectsio.o: /usr/include/sys/lock.h /usr/include/sys/types.h
+objectsio.o: /usr/include/machine/_types.h /usr/include/limits.h
+objectsio.o: /usr/include/features.h /usr/include/sys/cdefs.h
+objectsio.o: /usr/include/sys/features.h /usr/include/machine/types.h
+objectsio.o: /usr/include/cygwin/types.h /usr/include/sys/sysmacros.h
+objectsio.o: /usr/include/stdint.h /usr/include/endian.h
+objectsio.o: /usr/include/sys/stdio.h /usr/include/string.h
+objectsio.o: /usr/include/sys/string.h /usr/include/stdlib.h
+objectsio.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
+objectsio.o: /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h
+objectsio.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+objectsio.o: /usr/include/getopt.h /usr/include/math.h /usr/include/fcntl.h
+objectsio.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
+objectsio.o: /usr/include/time.h /usr/include/machine/time.h
+objectsio.o: /usr/include/cygwin/time.h /usr/include/signal.h
+objectsio.o: /usr/include/sys/signal.h /usr/include/cygwin/signal.h
+objectsio.o: /usr/include/cygwin/stat.h xlib/interface.h
+objectsio.o: /usr/X11R6/include/X11/Xlib.h /usr/X11R6/include/X11/X.h
+objectsio.o: /usr/X11R6/include/X11/Xfuncproto.h
+objectsio.o: /usr/X11R6/include/X11/Xosdefs.h /usr/X11R6/include/X11/Xutil.h
+objectsio.o: xlib/inlstring.h /usr/include/sys/ipc.h
+objectsio.o: /usr/include/cygwin/ipc.h /usr/include/sys/shm.h
+objectsio.o: /usr/include/cygwin/shm.h /usr/include/sys/cygwin.h
+objectsio.o: /usr/X11R6/include/X11/extensions/XShm.h xlib/input.h net.h
+objectsio.o: client.h server.h
+mygetopt.o: /usr/include/string.h /usr/include/_ansi.h /usr/include/newlib.h
+mygetopt.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
+mygetopt.o: /usr/include/cygwin/config.h /usr/include/sys/reent.h
+mygetopt.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
+mygetopt.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stddef.h
+mygetopt.o: /usr/include/sys/string.h /usr/include/stdio.h
+mygetopt.o: /usr/lib/gcc/i686-pc-cygwin/3.4.4/include/stdarg.h
+mygetopt.o: /usr/include/sys/types.h /usr/include/machine/_types.h
+mygetopt.o: /usr/include/limits.h /usr/include/features.h
+mygetopt.o: /usr/include/sys/cdefs.h /usr/include/sys/features.h
+mygetopt.o: /usr/include/machine/types.h /usr/include/cygwin/types.h
+mygetopt.o: /usr/include/sys/sysmacros.h /usr/include/stdint.h
+mygetopt.o: /usr/include/endian.h /usr/include/sys/stdio.h

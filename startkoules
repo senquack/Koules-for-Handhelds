@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ ! -f /usr/bin/wish ]; then
+	echo "Sorry, this script requires the tcl8.3 and tk8.3 packages to be installed."
+	echo "They are not a dependency of the koules package in case you don't want to use"
+	echo "this script. Please install those packages and execute this script again."
+	exit 1
+fi
+
+exec /usr/bin/wish /usr/lib/games/koules/koules.tcl
