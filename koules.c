@@ -1509,93 +1509,46 @@ process_keys ()
 					//	      else if (IsPressed (keys[i][1]))
 					//		s = 8;
 
-//					int             s = 0;
-
-					//DKS - modified GP2X code for GCW/Dingoo:
-					//	      if ((IsPressed (keys[i][2]) && IsPressed (keys[i][0])) || IsPressed(GP2X_BUTTON_UPLEFT))
-					//		s = 1;
-					//	      else if ((IsPressed (keys[i][3]) && IsPressed (keys[i][0])) || IsPressed(GP2X_BUTTON_UPRIGHT))
-					//		s = 2;
-					//	      else if ((IsPressed (keys[i][1]) && IsPressed (keys[i][3])) || IsPressed(GP2X_BUTTON_DOWNRIGHT))
-					//		s = 3;
-					//	      else if ((IsPressed (keys[i][1]) && IsPressed (keys[i][2])) || IsPressed(GP2X_BUTTON_DOWNLEFT))
-					//		s = 4;
-					//	      else if (IsPressed (keys[i][2]))
-					//		s = 5;
-					//	      else if (IsPressed (keys[i][3]))
-					//		s = 6;
-					//	      else if (IsPressed (keys[i][0]))
-					//		s = 7;
-					//	      else if (IsPressed (keys[i][1]))
-					//		s = 8;
-//					//DKS new version of above chunk of code follows:
-//					//	      if ((IsPressed (keys[i][2]) && IsPressed (keys[i][0])) || IsPressed(GP2X_BUTTON_UPLEFT))
-//					if (IsPressedUp() && IsPressedLeft())
-//						s = 1;
-//					//	      else if ((IsPressed (keys[i][3]) && IsPressed (keys[i][0])) || IsPressed(GP2X_BUTTON_UPRIGHT))
-//					else if (IsPressedUp() && IsPressedRight())
-//						s = 2;
-//					//	      else if ((IsPressed (keys[i][1]) && IsPressed (keys[i][3])) || IsPressed(GP2X_BUTTON_DOWNRIGHT))
-//					else if (IsPressedDown() && IsPressedRight())
-//						s = 3;
-//					//	      else if ((IsPressed (keys[i][1]) && IsPressed (keys[i][2])) || IsPressed(GP2X_BUTTON_DOWNLEFT))
-//					else if (IsPressedDown() && IsPressedLeft())
-//						s = 4;
-//					//	      else if (IsPressed (keys[i][2]))
-//					else if (IsPressedLeft())
-//						s = 5;
-//					//	      else if (IsPressed (keys[i][3]))
-//					else if (IsPressedRight())
-//						s = 6;
-//					//	      else if (IsPressed (keys[i][0]))
-//					else if (IsPressedUp())
-//						s = 7;
-//					//	      else if (IsPressed (keys[i][1]))
-//					else if (IsPressedDown())
-//						s = 8;
-//
-//					controls[i].type = C_KEYBOARD;
-//					controls[i].mask = s;
-//
 					int             s = 0;
 					if (nrockets == 1)
 					{ //DKS - only playing one player mode:
-						// .. that means player can control using either DPAD or A/B/X/Y (as dpad)
-						if (IsPressedUp() && IsPressedLeft())
+						// .. that means player can control using either DPAD, A/B/X/Y (as dpad), analog stick, or gsensor
+						if ((IsPressedUp() && IsPressedLeft()) ||
+								(IsPressedAltUp() && IsPressedAltLeft()) ||
+								(IsPressedAnalogUp() && IsPressedAnalogLeft()) ||
+								(IsPressedGsensorUp() && IsPressedGsensorLeft()))
 							s = 1;
-						else if (IsPressedUp() && IsPressedRight())
+						else if ((IsPressedUp() && IsPressedRight()) ||
+								(IsPressedAltUp() && IsPressedAltRight()) ||
+								(IsPressedAnalogUp() && IsPressedAnalogRight()) ||
+								(IsPressedGsensorUp() && IsPressedGsensorRight()))
 							s = 2;
-						else if (IsPressedDown() && IsPressedRight())
+						else if ((IsPressedDown() && IsPressedRight()) ||
+								(IsPressedAltDown() && IsPressedAltRight()) ||
+								(IsPressedAnalogDown() && IsPressedAnalogRight()) ||
+								(IsPressedGsensorDown() && IsPressedGsensorRight()))
 							s = 3;
-						else if (IsPressedDown() && IsPressedLeft())
+						else if ((IsPressedDown() && IsPressedLeft()) ||
+								(IsPressedAltDown() && IsPressedAltLeft()) ||
+								(IsPressedAnalogDown() && IsPressedAnalogLeft()) ||
+								(IsPressedGsensorDown() && IsPressedGsensorLeft()))
 							s = 4;
-						else if (IsPressedLeft())
+						else if (IsPressedLeft() || IsPressedAltLeft() ||
+								IsPressedAnalogLeft() || IsPressedGsensorLeft())
 							s = 5;
-						else if (IsPressedRight())
+						else if (IsPressedRight() || IsPressedAltRight() ||
+								IsPressedAnalogRight() || IsPressedGsensorRight())	
 							s = 6;
-						else if (IsPressedUp())
+						else if (IsPressedUp() || IsPressedAltUp() ||
+								IsPressedAnalogUp() || IsPressedGsensorUp())
 							s = 7;
-						else if (IsPressedDown())
-							s = 8;
-						else if (IsPressedAltUp() && IsPressedAltLeft())
-							s = 1;
-						else if (IsPressedAltUp() && IsPressedAltRight())
-							s = 2;
-						else if (IsPressedAltDown() && IsPressedAltRight())
-							s = 3;
-						else if (IsPressedAltDown() && IsPressedAltLeft())
-							s = 4;
-						else if (IsPressedAltLeft())
-							s = 5;
-						else if (IsPressedAltRight())
-							s = 6;
-						else if (IsPressedAltUp())
-							s = 7;
-						else if (IsPressedAltDown())
+						else if (IsPressedDown() || IsPressedAltDown() ||
+								IsPressedAnalogDown() || IsPressedGsensorDown())
 							s = 8;
 					} else {
 						if (i == 0) {
 							// we are in 2-player mode and handling player 1's controls:
+							//	In 2-player mode, player 1 can only be controlled by the DPAD:
 							if (IsPressedUp() && IsPressedLeft())
 								s = 1;
 							else if (IsPressedUp() && IsPressedRight())
@@ -1614,21 +1567,26 @@ process_keys ()
 								s = 8;
 						} else if (i == 1) {
 							// we are in 2-player mode and handling player 2's controls:
-							if (IsPressedAltUp() && IsPressedAltLeft())
+							//	In 2-player mode, player 2 can be controlled by the A/B/X/Y buttons or the analog stick:
+							if ((IsPressedAltUp() && IsPressedAltLeft()) ||
+									(IsPressedAnalogUp() && IsPressedAnalogLeft()))
 								s = 1;
-							else if (IsPressedAltUp() && IsPressedAltRight())
+							else if ((IsPressedAltUp() && IsPressedAltRight()) ||
+									(IsPressedAnalogUp() && IsPressedAnalogRight()))
 								s = 2;
-							else if (IsPressedAltDown() && IsPressedAltRight())
+							else if ((IsPressedAltDown() && IsPressedAltRight()) ||
+									(IsPressedAnalogDown() && IsPressedAnalogRight()))
 								s = 3;
-							else if (IsPressedAltDown() && IsPressedAltLeft())
+							else if ((IsPressedAltDown() && IsPressedAltLeft()) ||
+									(IsPressedAnalogDown() && IsPressedAnalogLeft()))
 								s = 4;
-							else if (IsPressedAltLeft())
+							else if (IsPressedAltLeft() || IsPressedAnalogLeft())
 								s = 5;
-							else if (IsPressedAltRight())
+							else if (IsPressedAltRight() || IsPressedAnalogRight()) 
 								s = 6;
-							else if (IsPressedAltUp())
+							else if (IsPressedAltUp() || IsPressedAnalogUp())
 								s = 7;
-							else if (IsPressedAltDown())
+							else if (IsPressedAltDown() || IsPressedAnalogDown())
 								s = 8;
 						}
 					}
@@ -1638,9 +1596,6 @@ process_keys ()
 			}
 			break;
 	}
-
-
-
 }
 
 #define MIN(a,b) ((a)>(b)?(b):(a))

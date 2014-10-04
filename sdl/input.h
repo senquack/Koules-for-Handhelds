@@ -61,10 +61,18 @@ extern const int SCREEN_BPP;
 #define CALTUP		11	// added another set of up/down/left/right controls for controlling
 							//	Player 1 with 2 different modes (i.e. DPAD and A/B/X/Y buttons for ease of use)
 							// -OR- Allowing two player mode on one device (i.e. DPAD is Player 1 and ABXY are Player 2)
-#define CALTDOWN	12
-#define CALTLEFT	13
-#define CALTRIGHT	14
-#define CNUMCONTROLS	15
+#define CALTDOWN			12
+#define CALTLEFT			13
+#define CALTRIGHT			14
+#define CANALOGUP			15
+#define CANALOGDOWN 		16
+#define CANALOGLEFT		17
+#define CANALOGRIGHT		18
+#define CGSENSORUP		19
+#define CGSENSORDOWN		20
+#define CGSENSORLEFT		21
+#define CGSENSORRIGHT	22
+#define CNUMCONTROLS		23
 
 extern int control_state[CNUMCONTROLS];
 
@@ -84,7 +92,7 @@ extern void control_update(void);
 #define IsPressedP() SDL_JoystickGetButton(joy, GP2X_BUTTON_L)
 //#define IsPressed(button) SDL_JoystickGetButton(joy, (button))
 //#define UpdateInput() SDL_JoystickUpdate()
-#else
+#elif GCW
 #define IsPressedEnter() control_pressed(CENTER)
 #define IsPressedUp() control_pressed(CUP)
 #define IsPressedDown() control_pressed(CDOWN)
@@ -98,6 +106,14 @@ extern void control_update(void);
 #define IsPressedAltDown() control_pressed(CALTDOWN)
 #define IsPressedAltLeft() control_pressed(CALTLEFT)
 #define IsPressedAltRight() control_pressed(CALTRIGHT)
+#define IsPressedAnalogUp() control_pressed(CANALOGUP)
+#define IsPressedAnalogDown() control_pressed(CANALOGDOWN)
+#define IsPressedAnalogLeft() control_pressed(CANALOGLEFT)
+#define IsPressedAnalogRight() control_pressed(CANALOGRIGHT)
+#define IsPressedGsensorUp() control_pressed(CGSENSORUP)
+#define IsPressedGsensorDown() control_pressed(CGSENSORDOWN)
+#define IsPressedGsensorLeft() control_pressed(CGSENSORLEFT)
+#define IsPressedGsensorRight() control_pressed(CGSENSORRIGHT)
 #define UpdateInput() control_update()
 #endif
 

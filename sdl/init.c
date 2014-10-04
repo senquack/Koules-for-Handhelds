@@ -140,37 +140,81 @@ int any_control_pressed(void)
 	return control_state[CHELP] || control_state[CPAUSE] || control_state[CENTER] || control_state[CESCAPE];
 }
 
+//DKS - added this hack function to fix power slider issues on GCW and when enabling/disabling gsensor/analog stick
+// Details: slider issues SDLK_PAUSE keypress before slider daemon
+// handles volume/lcd brightness adjustment, this somehow can interfere
+// with game's directional keystates after it is released.
+// Intended to be called from control_update() below
+static void control_reset()
+{
+	memset(control_state, 0, sizeof control_state);
+}
+
 void control_update(void)
 {
 	SDL_PumpEvents();
-	Uint8 *keystate = SDL_GetKeyState(NULL);
-	if (keystate)
-	{
-		// DINGOO / GCW DPAD control mapping:
-		control_state[CUP] 		= keystate[SDLK_UP];	
-		control_state[CDOWN] 	= keystate[SDLK_DOWN];	
-		control_state[CLEFT] 	= keystate[SDLK_LEFT];	
-		control_state[CRIGHT] 	= keystate[SDLK_RIGHT];	
-		// I decided help was not very helpful and more of a hindrance to controls:
-//		control_state[CHELP] 	= keystate[SDLK_BACKSPACE];			// R SHOULDER	
-		control_state[CPAUSE] 	= keystate[SDLK_RETURN];	// START
-		control_state[CENTER] 	= keystate[SDLK_LCTRL] || keystate[SDLK_LALT] 
-											|| keystate[SDLK_SPACE] || keystate[SDLK_LSHIFT];	// ANY BUTTON A/B/X/Y
-		control_state[CESCAPE] 	= keystate[SDLK_ESCAPE]; 		// SELECT 	
-#ifdef GP2X
-		control_state[CVOLUP] 	= 0;	//not used on dingoo/gcw
-		control_state[CVOLDOWN]	= 0;	//not used on dingoo/gcw
-#endif
-		control_state[CALTUP]	= keystate[SDLK_SPACE];	// Y
-		control_state[CALTDOWN]	= keystate[SDLK_LALT];	// B
-		control_state[CALTLEFT] = keystate[SDLK_LSHIFT];	// X
-		control_state[CALTRIGHT] = keystate[SDLK_LCTRL];	// A
-	}
-	else
-	{
-		printf("Error: Unable to retreive SDL keyboard state!\n");
-	}
+
+	//DKS
 #ifdef GCW
+	// Hack to get around bug in Dingux firmware when power slider button is pressed. It
+	//	interferes with SDL's internal keystate unless worked-around through the only way
+	//	it can be detected: events. (Polled state is not possible for detecting when to 
+	//	apply the hack).
+	SDL_Event event;
+	while(SDL_PollEvent(&event)){
+		switch(event.type){
+			case SDL_KEYDOWN:
+			case SDL_KEYUP:
+				switch(event.key.keysym.sym){
+					case SDLK_HOME:	// GCW Power slider - apply hack 
+						control_reset();
+						return;
+						break;
+					case SDLK_UP:
+						control_state[CUP] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CDOWN] = 0;	// power slider bug hack
+						break;
+					case SDLK_DOWN:
+						control_state[CDOWN] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CUP] = 0;	// power slider bug hack
+						break;
+					case SDLK_LEFT:
+						control_state[CLEFT] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CRIGHT] = 0;	// power slider bug hack
+						break;
+					case SDLK_RIGHT:
+						control_state[CRIGHT] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CLEFT] = 0;	// power slider bug hack
+						break;
+					case SDLK_RETURN:	// GCW Start button
+						control_state[CPAUSE] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						break;
+					case SDLK_ESCAPE:	// GCW Select button
+						control_state[CESCAPE] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						break;
+					case SDLK_SPACE:	// GCW Y button
+						control_state[CALTUP] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CENTER] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						break;
+					case SDLK_LALT:	// GCW B button
+						control_state[CALTDOWN] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CENTER] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						break;
+					case SDLK_LSHIFT:	// GCW X button
+						control_state[CALTLEFT] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CENTER] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						break;
+					case SDLK_LCTRL:	// GCW A button
+						control_state[CALTRIGHT] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						control_state[CENTER] = (event.type == SDL_KEYDOWN) ? 1 : 0;
+						break;
+					default:
+						break;
+				}
+		}
+	}
+
+	Uint8 *keystate = SDL_GetKeyState(NULL);	// strictly to read L/R Triggers for g-sensor calibration below
 	//DKS - on GCW, control can also be done with the analog stick or the g-sensor:
 	// First, see if the user is pressing L+R shoulder buttons together, signalling a 
 	//		desire to zero-out the g-sensor (allows playing in bed, at a slant, etc)
@@ -195,48 +239,33 @@ void control_update(void)
 		printf("G-sensor zeroed out.. new center-x: %d   new center-y: %d\n", gsensor_centerx, gsensor_centery);
 	}
 
-
 	// ANALOG JOY:
-	if (gamemode == GAME && analog_enabled && joy_analog) {
+	if (analog_enabled && joy_analog) {
 		Sint16 xmove, ymove;
 		xmove=SDL_JoystickGetAxis(joy_analog,0);
 		ymove=SDL_JoystickGetAxis(joy_analog,1);
-		if (nrockets == 1) {
-			// One-player mode, analog controls player 1
-			control_state[CLEFT] 	|= (xmove < -analog_deadzone);
-			control_state[CRIGHT] 	|= (xmove > analog_deadzone);
-			control_state[CUP] 		|= (ymove < -analog_deadzone);
-			control_state[CDOWN] 	|= (ymove > analog_deadzone);
-		} else {
-			// Two-player mode, analog controls player 2
-			control_state[CALTLEFT] 	|= (xmove < -analog_deadzone);
-			control_state[CALTRIGHT] 	|= (xmove > analog_deadzone);
-			control_state[CALTUP] 		|= (ymove < -analog_deadzone);
-			control_state[CALTDOWN] 	|= (ymove > analog_deadzone);
-		}
+		control_state[CANALOGLEFT] 	= (xmove < -analog_deadzone);
+		control_state[CANALOGRIGHT] 	= (xmove > analog_deadzone);
+		control_state[CANALOGUP] 		= (ymove < -analog_deadzone);
+		control_state[CANALOGDOWN] 	= (ymove > analog_deadzone);
+	} else {
+		control_state[CANALOGUP] = control_state[CANALOGDOWN] =
+			control_state[CANALOGLEFT] = control_state[CANALOGRIGHT] = 0;
 	}
 
 	//G-SENSOR:
-	if (gamemode == GAME && gsensor_enabled && joy_gsensor && nrockets == 1) { // disabled in 2-player mode
+	if (gsensor_enabled && joy_gsensor) { // disabled in 2-player mode
 		Sint16 xmove, ymove;
 		xmove=SDL_JoystickGetAxis(joy_gsensor,0);
 		ymove=SDL_JoystickGetAxis(joy_gsensor,1);
-		if (nrockets == 1) {
-			// One-player mode, analog controls player 1
-			control_state[CLEFT] 	|= (xmove < (gsensor_centerx - gsensor_deadzone));
-			control_state[CRIGHT] 	|= (xmove > (gsensor_centerx + gsensor_deadzone));
-			control_state[CUP] 		|= (ymove < (gsensor_centery - gsensor_deadzone));
-			control_state[CDOWN] 	|= (ymove > (gsensor_centery + gsensor_deadzone));
-		} else {
-			// Two-player mode, analog controls player 2
-			control_state[CALTLEFT] 	|= (xmove < (gsensor_centerx - gsensor_deadzone));
-			control_state[CALTRIGHT] 	|= (xmove > (gsensor_centerx + gsensor_deadzone));
-			control_state[CALTUP] 		|= (ymove < (gsensor_centery - gsensor_deadzone));
-			control_state[CALTDOWN] 	|= (ymove > (gsensor_centery + gsensor_deadzone));
-		}
+		control_state[CGSENSORLEFT] 	= (xmove < (gsensor_centerx - gsensor_deadzone));
+		control_state[CGSENSORRIGHT] 	= (xmove > (gsensor_centerx + gsensor_deadzone));
+		control_state[CGSENSORUP] 		= (ymove < (gsensor_centery - gsensor_deadzone));
+		control_state[CGSENSORDOWN] 	= (ymove > (gsensor_centery + gsensor_deadzone));
+	} else {
+		control_state[CGSENSORUP] = control_state[CGSENSORDOWN] =
+			control_state[CGSENSORLEFT] = control_state[CGSENSORRIGHT] = 0;
 	}
-	
-	
 #endif
 }
 
@@ -250,7 +279,6 @@ extern unsigned int     rocketcolor[5];
 extern void     setcustompalette (int, float);
 extern void     starwars ();
 extern void     game ();
-
 
 #define NCOLORS 32
 
@@ -491,8 +519,13 @@ initialize (void)
 	SDL_JoystickEventState(SDL_IGNORE); // We'll do our own polling
 	//DKS - also disable keyboard events:
 	SDL_EnableKeyRepeat(0, 0); // No key repeat
-	SDL_EventState(SDL_KEYDOWN, SDL_IGNORE);
-	SDL_EventState(SDL_KEYUP, SDL_IGNORE);
+	//DKS - originally, I wanted to ignore keyboard events but found at least on GCW that
+	//		it disabled me from detecting the power-slider and getting around a nasty
+	//		bug when using it. The bug was that when you press the power slider, it can
+	//		lock other keys into being thought pressed. I tried to no avail to even detect
+	//		it was pressed (SDLK_HOME) by any means other than keyboard events.
+//	SDL_EventState(SDL_KEYDOWN, SDL_IGNORE);
+//	SDL_EventState(SDL_KEYUP, SDL_IGNORE);
 #else
 	joy = NULL;
 	SDL_JoystickEventState(SDL_IGNORE); // We'll do our own polling
@@ -502,8 +535,7 @@ initialize (void)
   setcustompalette (0, 1);
 
   printf ("Initializing control status array\n");
-  for (int ctr = 0; ctr < CNUMCONTROLS; ctr++)
-	  control_state[ctr] = 0;
+  control_reset();
 
   printf ("Initializing video memory\n");
 
