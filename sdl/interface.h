@@ -72,6 +72,8 @@ extern SFont_Font *fontblack;
 extern SDL_Surface *fontblack_surface;
 extern SFont_Font *fontwhite;
 extern SDL_Surface *fontwhite_surface;
+extern SFont_Font *fontgray;
+extern SDL_Surface *fontgray_surface;
 
 /*DKS - modified
 extern VScreenType physicalscreen;
@@ -199,6 +201,9 @@ DKS */
 
 #define DrawWhiteMaskedText(passed_surface, x, y, text) \
   SFont_Write((passed_surface), fontwhite, (x), (y), (text))
+
+#define DrawGrayMaskedText(passed_surface, x, y, text) \
+  SFont_Write((passed_surface), fontgray, (x), (y), (text))
 
 extern void DrawText (SDL_Surface *passed_surface, int x, int y, char *text);
 

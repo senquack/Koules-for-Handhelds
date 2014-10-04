@@ -597,6 +597,8 @@ nmain_menu ()
 //  menu[4].text = "GAME MODE";
   menu[4].text = "MULTI-PLAYER GAME MODE";
   menu[4].func = change_mode;
+  //DKS - awful hack to allow displaying of grayed-out text for this option
+#define MENU_LINE_FOR_MULTIPLAYER_GAME_MODE 4
   menu[5].text = music_enabled ? "MUSIC: ENABLED" : "MUSIC: DISABLED";
   menu[5].func = setmusic;
 	menu[6].text = analog_enabled ? "ANALOG STICK: ENABLED" : "ANALOG STICK: DISABLED";
@@ -897,7 +899,16 @@ draw_menu (CONST int draw)
       for (i = 0; i < nmenu; i++)
 	{
 	  DrawBlackMaskedText (physicalscreen, (int) XPOSITION (i) + 1, (int) YPOSITION (i) + 1, menu[i].text);
+	  // DKS - awful hack to allow some grayed-out menu options
+#ifdef GCW
+		if (i == MENU_LINE_FOR_MULTIPLAYER_GAME_MODE && nrockets == 1) {
+		  DrawGrayMaskedText (physicalscreen, (int) XPOSITION (i), (int) YPOSITION (i), menu[i].text);
+		} else {
+		  DrawWhiteMaskedText (physicalscreen, (int) XPOSITION (i), (int) YPOSITION (i), menu[i].text);
+		}
+#else
 	  DrawWhiteMaskedText (physicalscreen, (int) XPOSITION (i), (int) YPOSITION (i), menu[i].text);
+#endif
 	}
 
 #ifdef GP2X
