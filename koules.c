@@ -239,7 +239,7 @@ points ()
 	//DKS these two are from me:
 	//  Uint16 *pixels_ptr = (Uint16 *)(physicalscreen->pixels);
 	//  Uint16 surface_width = physicalscreen->w;
-#ifdef GCW
+#ifdef SDL32BPP
 	Uint32 *pixels_ptr = (Uint32 *)(physicalscreen->pixels);
 	Uint32 surface_width = physicalscreen->w;
 #else
